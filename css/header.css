@@ -1,1 +1,48 @@
-/* No CSS *//*# sourceMappingURL=header.css.map */
+.header {
+  background-color: #ffffff;
+}
+
+.header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  height: 40px;
+}
+
+.search__input {
+  width: 350px;
+  height: 100%;
+  padding-left: 23px;
+  background-color: #F5FAFE;
+  border: none;
+  font-size: 12px;
+  line-height: 15px;
+  color: #333333;
+}
+
+.search__button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 65px;
+  height: 100%;
+  border: none;
+}
+/*# sourceMappingURL=header.css.map */
