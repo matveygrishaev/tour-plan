@@ -535,7 +535,7 @@ template {
 
 .newsletter .subscribe {
   position: relative;
-  width: 355px;
+  width: 350px;
   height: 55px;
   border-radius: 4px;
   overflow: hidden;
@@ -908,7 +908,7 @@ template {
   .container {
     max-width: 960px;
   }
-  .slider {
+  .hotel__slide {
     width: 590px;
   }
   -slide__image {
@@ -1064,6 +1064,9 @@ template {
 }
 
 @media (max-width: 576px) {
+  .container {
+    max-width: 280px;
+  }
   .logo {
     width: 99px;
   }
@@ -1076,11 +1079,23 @@ template {
   .newsletter {
     padding: 76px 0 83px 0;
   }
-  .newsletter__title {
+  .newsletter-title {
+    margin: 0;
     margin-bottom: 37px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .newsletter-title__strong {
+    margin-top: 5px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 38px;
   }
   .newsletter__subscribe {
-    width: 100%;
+    max-width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
