@@ -497,7 +497,7 @@ template {
 
 .newsletter-wrapper {
   position: relative;
-  max-width: 731px;
+  width: 731px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1392,6 +1392,9 @@ template {
   }
   .newsletter {
     padding: 76px 0 83px 0;
+  }
+  .newsletter-wrapper {
+    width: 280px;
   }
   .newsletter-title {
     margin: 0;
