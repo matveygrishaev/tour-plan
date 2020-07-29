@@ -1062,7 +1062,7 @@ template {
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 60px;
   margin-bottom: 57px;
 }
 
@@ -1120,6 +1120,7 @@ template {
 .card__title {
   font-style: normal;
   font-weight: bold;
+  max-width: 80%;
   font-size: 16px;
   line-height: 20px;
   color: inherit;
@@ -1155,6 +1156,9 @@ template {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .card {
+    width: 225px;
   }
 }
 
@@ -1208,18 +1212,43 @@ template {
   .map {
     width: 340px;
   }
+  .reviews {
+    padiing: 40px 0 60px 0;
+  }
   .reviews__title {
-    margin-bottom: 50px;
+    margin-bottom: 57px;
   }
   .reviews-slider__item {
     max-width: 580px;
+  }
+  .activities {
+    padiing: 40px 0 70px 0;
+  }
+  .activities__title {
+    margin: 0;
+    margin-bottom: 57px;
+  }
+  .activities-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .card {
+    width: 339px;
+  }
+  .card:nth-last-of-type(n+3) {
+    margin-bottom: 20px;
+  }
+  .card__image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    max-width: 576px;
-    width: 92%;
+    width: 576px;
   }
   .navbar__search, .navbar-menu, .navbar__user {
     display: none;
@@ -1339,11 +1368,18 @@ template {
     font-size: 30px;
     line-height: 38px;
   }
+  .card {
+    width: 576px;
+  }
+  .card:nth-last-of-type(n+2) {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 576px) {
   .container {
-    max-width: 280px;
+    width: 280px;
+    margin: auto;
   }
   .logo {
     width: 99px;
@@ -1387,6 +1423,20 @@ template {
     line-height: 23px;
     text-align: center;
     text-transform: uppercase;
+  }
+  .activities {
+    padding: 40px 0 60px 0;
+  }
+  .activities__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 36px;
+  }
+  .card {
+    width: 281px;
+    height: 255px;
   }
 }
 /*# sourceMappingURL=style.css.map */
