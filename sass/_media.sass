@@ -12,6 +12,9 @@
         object-fit: cover
   .card
     width: 225px
+  .footer
+    &__input
+      flex-basis: 100%
 @media (max-width: 992px) // Ipad mini-1
   .container,
   .newsletter-wrapper
@@ -68,6 +71,43 @@
       width: 100%
       height: 100%
       object-fit: cover
+  .footer
+    &-wrapper
+      grid-template-columns: repeat(6, 1fr)
+      grid-row-gap: 40px
+    &__input
+      flex-basis: 49%
+    &__logo
+      grid-row: 1 / 2
+      grid-column: span 2
+    &__social
+      &-network
+        grid-row: 1 / 2
+        grid-column: span 4
+        align-self: center
+    &__categories
+      grid-row: 2 / 3
+      grid-column: span 2
+    &__legal
+      grid-column: span 2
+    &__additional
+      grid-column: span 2
+    &__contact
+      &-details
+        grid-column: span 5
+        grid-row: 3
+      &-form
+        grid-row: 4
+        grid-column: span 5
+  .under-footer
+    &-wrapper
+      grid-template-columns: repeat(6, minmax(min-content, 1fr))
+      grid-column-gap: 20px
+    &__links-list
+      grid-column: 1 / 5
+      justify-self: start
+    &__cards-image
+      grid-column: 5 / 7
 @media (max-width: 768px)
   .container
     width: 576px
@@ -154,6 +194,9 @@
     width: 278px
     &:nth-last-of-type(n+2)
       margin-bottom: 20px
+  .footer
+    &__input
+      flex-basis: 100%
 @media (max-width: 576px)
   .container
     width: 280px
@@ -203,4 +246,89 @@
       font-size: 18px
       line-height: 23px
       margin-bottom: 36px
+  .footer
+    padding-top: 69px
+    padding-bottom: 21px
+    &-wrapper
+      grid-template-columns: 1fr
+    &__social-network,
+    &__additional,
+    &__categories,
+    &__legal,
+    &__contact-details,
+    &__contact-form
+      max-width: 280px
+    &__logo
+      grid-row: 1
+      grid-column: 1
+    &__title
+      &--mb-4
+        margin-bottom: 15px
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+    &__additional
+      grid-row: 3
+      grid-column: 1
+    &__categories
+      grid-row: 4
+      grid-column: 1
+    &__legal
+      grid-row: 5
+      grid-column: 1
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+      &-form
+        grid-row: 7
+        grid-column: 1
+    &__info
+      flex-basis: 100%
+    &__other
+    &__form
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(5, min-content)
+    &__input
+      &--name
+        grid-row: 1 / 2
+      &--phone
+        grid-row: 2 / 3
+    &__message
+      grid-column: 1 / 2
+      margin-bottom: 15px
+    &__info
+      grid-row: 4 / 5
+      margin-bottom: 15px
+    &__button
+      width: 160px
+      min-height: 50px
+      overflow: hidden
+  .under-footer
+    &__wrapper
+      grid-template-columns: 1fr
+      grid-template-rows: 1fr 1fr
+    &__links-list
+      grid-column: 1 / 2
+      max-width: 100%
+    &__cards-image
+      grid-row: 2 / 3
+      grid-column: 1 / 2
+      justify-self: start
+    &__links-list
+      display: flex
+      justify-content: space-between
+      width: 280px
+    &__link
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      &:nth-last-of-type(n+2)
+        margin-right: 0
+      
+      
+  
 
