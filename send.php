@@ -1,32 +1,56 @@
 <?php
 // Файлы phpmailer
-require ‘class.phpmailer.php’;
-require ‘class.smtp.php’;
-// Переменные
-$name = $_POST[‘name’];
-$phone = $_POST[‘phone’];
-$message = $_POST[‘message’];
-// Настройки
-$mail = new PHPMailer;
-$mail->isSMTP(); 
-$mail->Host = ‘smtp.mail.ru’; 
-$mail->SMTPAuth = true; 
-$mail->Username = ‘matveygrishaev2020’; // Ваш логин в Яндексе. Именно логин, без @yandex.ru
-$mail->Password = ‘blackswiss1860mail’; // Ваш пароль
-$mail->SMTPSecure = ‘ssl’; 
-$mail->Port = 465;
-$mail->setFrom(‘matveygrishaev2020@mail.ru’); // Ваш Email
-$mail->addAddress(‘example@mail.ru’); // Email получателя
-$mail->addAddress(‘example@gmail.com’); // Еще один email, если нужно.
-// Письмо
-$mail->isHTML(true); 
-$mail->Subject = “Новое обращение BEST TOUR PLAN”; // Заголовок письма
-$mail->Body = “Имя: $name . Телефон: $phone . Сообщение: $message”; // Текст письма
-// Результат
-if(!$mail->send()) {
- echo ‘Message could not be sent.’;
- echo ‘Mailer Error: ‘ . $mail->ErrorInfo;
-} else {
- echo ‘ok’;
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/SMTP.php';
+require 'phpmailer/Exception.php';
+
+// Переменные, которые отправляет пользователь
+$name = $_POST['name'];
+$phone = $_POST['phone'];
+$message = $_POST['message'];
+
+// Формирование самого письма
+$title = "Новое обращение";
+$body = "
+<h2>Новое письмо</h2>
+<b>Имя:</b> $name<br>
+<b>Телефон:</b> $phone<br><br>
+<b>Сообщение:</b><br>$message
+";
+
+// Настройки PHPMailer
+$mail = new PHPMailer\PHPMailer\PHPMailer();
+try {
+    $mail->isSMTP();   
+    $mail->CharSet = "UTF-8";
+    $mail->SMTPAuth   = true;
+    // $mail->SMTPDebug = 2;
+    $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
+
+    // Настройки вашей почты
+    $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
+    $mail->Username   = 'matveygrishaev2020@mail.ru'; // Логин на почте
+    $mail->Password   = 'blackswiss1860mail'; // Пароль на почте
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port       = 465;
+    $mail->setFrom('matveygrishaev2020@mail.ru', 'Матвей Гришаев'); // Адрес самой почты и имя отправителя
+
+    // Получатель письма
+    $mail->addAddress('matveygrishaev@gmail.com');
+
+// Отправка сообщения
+$mail->isHTML(true);
+$mail->Subject = $title;
+$mail->Body = $body;    
+
+// Проверяем отравленность сообщения
+if ($mail->send()) {$result = "success";} 
+else {$result = "error";}
+
+} catch (Exception $e) {
+    $result = "error";
+    $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
-?>
+
+// Отображение результата
+header('Location: thanks.php');
