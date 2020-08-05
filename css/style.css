@@ -1635,6 +1635,7 @@ template {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-width: 245px;
   }
   .navbar__user {
     -webkit-box-orient: vertical;
