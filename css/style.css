@@ -444,7 +444,7 @@ template {
 
 .navbar-bottom {
   background-color: #0A223D;
-  padding-top: 30px;
+  padding-top: 31px 0;
 }
 
 .navbar-menu {
