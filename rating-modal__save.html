@@ -1,0 +1,36 @@
+<div class="modal" id="rating-modal">
+  <div class="modal__overlay"></div>
+  <!-- /.modal__overlay -->
+  <div class="modal__dialog">
+    <a href="#" class="modal__close">
+      <img src="img/close.svg" alt="icon: close" />
+    </a>
+    <h3 class="modal__title modal__title--mb-3 modal__title--mb-4">
+      Rating
+    </h3>
+    <form action="send.php" method="POST" class="form modal__form">
+      <input
+        type="text"
+        name="name"
+        class="input modal__input modal__input--name"
+        placeholder="Your Full Name*"
+      />
+      <input
+        type="tel"
+        name="phone"
+        class="input modal__input modal__input--phone"
+        placeholder="Phone Number*"
+      />
+      <textarea
+        class="message modal__message"
+        name="message"
+        placeholder="Message"
+      ></textarea>
+      <button class="button modal__button" type="submit">
+        Send
+      </button>
+      <span class="modal__info">* Required Fields</span>
+    </form>
+  </div>
+  <!-- /.modal__dialog -->
+</div>
