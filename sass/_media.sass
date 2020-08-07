@@ -53,7 +53,9 @@
   .reviews
     padding: 40px 0 60px 0
     &__title
-      margin-bottom: 57px
+      margin: 0
+      &-wrapper
+        margin-bottom: 57px
     &-slider
       &__item
         max-width: 580px
@@ -202,6 +204,9 @@
   .map
     width: 100%  
   .newsletter
+    &-title
+      margin: 0
+      margin-bottom: 37px
     &-wrapper
       max-width: 576px
       width: 92%
@@ -225,11 +230,13 @@
           margin-right: -75px
           transform: translateY(50%, 0)
     &__title
-      margin-bottom: 50px
       font-style: normal
       font-weight: bold
       font-size: 30px
       line-height: 38px
+      margin: 0
+      &-wrapper
+        margin-bottom: 50px
   .activities
     &-wrapper
   .card
@@ -242,7 +249,7 @@
         flex-basis: 100%
 @media (max-width: 576px)
   .container
-    width: 280px
+    max-width: 320px
     margin: auto
   .logo
     width: 99px
@@ -271,16 +278,22 @@
         word-wrap: none
     &__subscribe
       max-width: 100%
+  .subscribe
+    &__input
+      width: 280px
+      &-group
+        width: 280px 
   .reviews
     padding: 40px 0 50px 0
     &__title
-      margin-bottom: 42px
+      margin: 0
       max-width: 245px  
       font-weight: bold
       font-size: 18px
       line-height: 23px
-      text-align: center
       text-transform: uppercase
+      &-wrapper
+        margin-bottom: 42px
   .activities
     padding: 40px 0 60px 0
     &__title
