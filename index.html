@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=	, initial-scale=1.0" />
     <title>Best Tour Plan - Hotel Booking</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&family=Nunito:wght@400;700;800&display=swap"
       rel="preload"
@@ -215,7 +216,9 @@
             data-href="#rating-modal"
           >
             <span class="rating__text">User Rattings</span>
-            <span class="rating__counter">4.5/5</span>
+            <span class="rating__counter"
+              >4.5/<span class="rating__counter--mini">5</span></span
+            >
           </div>
           <!-- /.hotel-info__rating -->
         </div>
@@ -378,9 +381,11 @@
     </section>
     <section class="reviews">
       <div class="container">
-        <div class="reviews__title-wrapper"><h2 class="reviews__title">
-          What people thinks about us
-        </h2></div>
+        <div class="reviews__title-wrapper">
+          <h2 class="reviews__title">
+            What people thinks about us
+          </h2>
+        </div>
         <div class="swiper-container reviews-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -431,85 +436,21 @@
       </div>
     </section>
     <!-- Развлечения -->
-    <section class="activities">
-      <div class="container">
-        <h2 class="activities__title">Other Activities</h2>
-        <div class="activities-wrapper">
-          <div
-            class="card"
-            data-aos="fade-up"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="300"
-          >
-            <img
-              src="img/activity-1.jpg"
-              alt="Activity: The curious corner of chamarel"
-              class="card__image"
-            />
-            <h2 class="card__title">The curious corner of chamarel</h2>
-            <button class="card__button">Book Now</button>
-          </div>
-          <div
-            class="card"
-            data-aos="fade-up"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="400"
-          >
-            <img
-              src="img/activity-2.jpg"
-              alt="Activity: Gymkhana club golf course"
-              class="card__image"
-            />
-            <h2 class="card__title">Gymkhana club golf course</h2>
-            <button class="card__button">Book Now</button>
-          </div>
-          <div
-            class="card"
-            data-aos="fade-up"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="500"
-          >
-            <img
-              src="img/activity-3.jpg"
-              alt="Activity: Tamarind falls hiking trip - full day"
-              class="card__image"
-            />
-            <h2 class="card__title">Tamarind falls hiking trip - full day</h2>
-            <button class="card__button">Book Now</button>
-          </div>
-          <div
-            class="card"
-            data-aos="fade-up"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="600"
-          >
-            <img
-              src="img/activity-4.jpg"
-              alt="Activity: The blue marine discovery quest"
-              class="card__image"
-            />
-            <h2 class="card__title">The blue marine discovery quest</h2>
-            <button class="card__button">Book Now</button>
-          </div>
-          <!-- /.card -->
-        </div>
-        <!-- /.activities-wrapper -->
-      </div>
-    </section>
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img
-            src="img/vertical-logo.svg"
-            alt="Best Tour Plan"
+          <a
+            href="#"
             class="logo footer__logo"
             data-aos="zoom-in"
             data-aos-anchor="#example-anchor"
             data-aos-duration="500"
             data-aos-delay="450"
-          />
+          >
+            <img src="img/vertical-logo.svg" alt="Best Tour Plan" />
+          </a>
           <div class="footer__list footer__categories">
-            <h3 class="footer__title">ALL CATEGORIES</h3>
+            <h3 class="footer__title">ALL&nbsp;CATEGORIES</h3>
             <ul class="footer__ul">
               <li class="footer__item">
                 <a href="#" class="footer__link">All Deals</a>
@@ -538,7 +479,7 @@
             </ul>
           </div>
           <div class="footer__list footer__additional">
-            <h3 class="footer__title">ADDITIONAL INFORMATION</h3>
+            <h3 class="footer__title">ADDITIONAL&nbsp;INFORMATION</h3>
             <ul class="footer__ul">
               <li class="footer__item">
                 <a href="#" class="footer__link">About Uss</a>
@@ -580,7 +521,7 @@
           </div>
           <!-- /.footer__social-network -->
           <div class="footer__list footer__legal">
-            <h3 class="footer__title">LEGAL INFORMATION</h3>
+            <h3 class="footer__title">LEGAL&nbsp;INFORMATION</h3>
             <ul class="footer__ul">
               <li class="footer__item">
                 <a href="#" class="footer__link">Terms & Conditions</a>
@@ -598,7 +539,9 @@
           </div>
           <!-- /.footer__list -->
           <div class="footer__contact-details">
-            <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
+            <h3 class="footer__title footer__title--mb-3">
+              Contact&nbsp; Details
+            </h3>
             <p class="footer__text">
               Feel free to contact us by phone, email or by our contact form
             </p>
@@ -622,10 +565,14 @@
                     class="footer__icon"
                   />
                 </div>
-                Tel (business hours) : 269 1500<br />
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am –
-                20:00<br />
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)<br />
+                Tel (business hours) :
+                <a class="footer__tel" href="tel:269 1500">269 1500</a><br />
+                Tel (hotline) Monday - Saturday:
+                <a class="footer__tel" href="tel:52-56-61-38">52-56-61-38</a>
+                (08:00 am – 20:00 pm)<br />
+                Tel (hotline) Sunday:
+                <a class="footer__tel" href="tel:52-56-61-38">52-56-61-38</a>
+                (08:00 am – 14:00 pm)<br />
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
@@ -642,7 +589,7 @@
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
             <h3
-              class="footer__title footer__title--mb-3 footer__title--mb-4"
+              class="footer__title footer__title--mb-4"
               data-aos="zoom-in"
               data-aos-anchor="#example-anchor"
               data-aos-offset="500"
