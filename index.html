@@ -75,7 +75,8 @@
             </li>
             <li class="navbar-menu__item navbar-menu__item--mobile--visible">
               <form
-                action="send.php" method="POST"
+                action="send.php"
+                method="POST"
                 class="search navbar__search navbar__search--mobile--visible"
               >
                 <input
@@ -293,7 +294,11 @@
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
         <div class="subscribe__input-group">
-          <form action="send.php" method="POST" class="form subscribe newsletter__subscribe">
+          <form
+            action="send.php"
+            method="POST"
+            class="form subscribe newsletter__subscribe"
+          >
             <input
               type="email"
               class="subscribe__input input"
@@ -569,7 +574,8 @@
               </div>
               <div class="footer__input-group">
                 <input
-                  type="text"
+                  type="tel"
+                  pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
                   name="phone"
                   class="input footer__input footer__input--phone"
                   placeholder="Phone Number*"
@@ -630,6 +636,7 @@
           <input
             type="tel"
             name="phone"
+            pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
             class="input modal__input modal__input--phone"
             placeholder="Phone Number*"
             required
