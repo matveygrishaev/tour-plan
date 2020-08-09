@@ -20,7 +20,7 @@ $(document).ready(function () {
     },
   });
 
-  var menuButton = $(".menu-button");
+  var menuButton = $(".menu-opener");
   menuButton.on("click", function () {
     console.log("Привет");
     $(".navbar-bottom").toggleClass("navbar-bottom--visible");
@@ -62,4 +62,5 @@ $(document).ready(function () {
       },
     });
   });
+  $(".phone_us").mask("+7 (000)-000-0000");
 });
