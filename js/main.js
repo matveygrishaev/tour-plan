@@ -22,7 +22,8 @@ $(document).ready(function () {
 
   var menuButton = $(".menu-button");
   menuButton.on("click", function () {
-    $("navbar-bottom").toggleClass("navbar-bottom--visible");
+    console.log("Привет");
+    $(".navbar-bottom").toggleClass("navbar-bottom--visible");
   });
 
   var modalButton = $("[data-toggle=modal]");
@@ -61,5 +62,4 @@ $(document).ready(function () {
       },
     });
   });
-  AOS.init();
 });

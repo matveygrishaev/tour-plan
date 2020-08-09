@@ -10,22 +10,13 @@
       rel="preload"
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="navbar navbar--mobile_fixed">
       <div class="container">
         <div class="navbar-top">
-          <a
-            href="#"
-            class="logo"
-            data-aos="zoom-in"
-            data-aos-anchor="#example-anchor"
-            data-aos-offset="500"
-            data-aos-duration="500"
-            data-aos-delay="450"
-          >
+          <a href="#" class="logo">
             <img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -34,7 +25,8 @@
           </a>
 
           <form
-            action="#"
+            action="send.php"
+            method="POST"
             class="search navbar__search navbar__search--mobile--hidden"
           >
             <input
@@ -65,7 +57,7 @@
         <!-- /.navbar-top -->
       </div>
       <!-- /.container -->
-      <div class="navbar-bottom" data-aos="fade-left">
+      <div class="navbar-bottom">
         <div class="container">
           <ul class="navbar-menu">
             <li class="navbar-menu__item navbar-menu__item--mobile--visible">
@@ -83,7 +75,7 @@
             </li>
             <li class="navbar-menu__item navbar-menu__item--mobile--visible">
               <form
-                action="#"
+                action="send.php" method="POST"
                 class="search navbar__search navbar__search--mobile--visible"
               >
                 <input
@@ -96,74 +88,25 @@
                 </button>
               </form>
             </li>
-            <li
-              class="navbar-menu__item"
-              data-aos="fade-right"
-              data-aos-anchor="#example-anchor"
-              data-aos-offset="500"
-              data-aos-duration="300"
-              data-aos-delay="150"
-            >
+            <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">All Deals</a>
             </li>
-            <li
-              class="navbar-menu__item"
-              data-aos="fade-right"
-              data-aos-anchor="#example-anchor"
-              data-aos-offset="500"
-              data-aos-duration="400"
-              data-aos-delay="250"
-            >
+            <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">Hotels</a>
             </li>
-            <li
-              class="navbar-menu__item"
-              data-aos="fade-right"
-              data-aos-anchor="#example-anchor"
-              data-aos-offset="500"
-              data-aos-duration="500"
-              data-aos-delay="300"
-            >
+            <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">Activities</a>
             </li>
-            <li
-              class="navbar-menu__item"
-              data-aos="fade-right"
-              data-aos-anchor="#example-anchor"
-              data-aos-offset="500"
-              data-aos-duration="500"
-              data-aos-delay="350"
-            >
+            <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">Hotel Day Packages</a>
             </li>
-            <li
-              class="navbar-menu__item"
-              data-aos="fade-right"
-              data-aos-anchor="#example-anchor"
-              data-aos-offset="500"
-              data-aos-duration="500"
-              data-aos-delay="400"
-            >
+            <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">Restaurants</a>
             </li>
-            <li
-              class="navbar-menu__item"
-              data-aos="fade-right"
-              data-aos-anchor="#example-anchor"
-              data-aos-offset="500"
-              data-aos-duration="500"
-              data-aos-delay="450"
-            >
+            <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">Events</a>
             </li>
-            <li
-              class="navbar-menu__item"
-              data-aos="fade-right"
-              data-aos-anchor="#example-anchor"
-              data-aos-offset="500"
-              data-aos-duration="500"
-              data-aos-delay="500"
-            >
+            <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">Rodrigues</a>
             </li>
           </ul>
@@ -343,31 +286,14 @@
       </div>
       <!-- /.container -->
     </section>
-    <section
-      class="newsletter"
-      data-aos="fade-left"
-      data-aos-duration="1200"
-      data-aos-easing="ease-in-sine"
-    >
+    <section class="newsletter">
       <div class="newsletter-wrapper">
-        <h2
-          class="newsletter-title newsletter__title"
-          data-aos="fade-right"
-          data-aos-duration="1200"
-          data-aos-delay="200"
-          data-aos-easing="ease-in-back"
-        >
+        <h2 class="newsletter-title newsletter__title">
           subscribe to our
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
-        <div
-          class="subscribe__input-group"
-          data-aos="fade-left"
-          data-aos-duration="600"
-          data-aos-delay="400"
-          data-aos-easing="ease-in-back"
-        >
-          <form action="#" class="form subscribe newsletter__subscribe">
+        <div class="subscribe__input-group">
+          <form action="send.php" method="POST" class="form subscribe newsletter__subscribe">
             <input
               type="email"
               class="subscribe__input input"
@@ -435,18 +361,56 @@
         <!-- ./reviews-slider -->
       </div>
     </section>
+    <section class="activities">
+      <div class="container">
+        <h2 class="activities__title">Other Activities</h2>
+        <div class="activities-wrapper">
+          <div class="card">
+            <img
+              src="img/activity-1.jpg"
+              alt="Activity: The curious corner of chamarel"
+              class="card__image"
+            />
+            <h2 class="card__title">The curious corner of chamarel</h2>
+            <button class="card__button">Book Now</button>
+          </div>
+          <div class="card">
+            <img
+              src="img/activity-2.jpg"
+              alt="Activity: Gymkhana club golf course"
+              class="card__image"
+            />
+            <h2 class="card__title">Gymkhana club golf course</h2>
+            <button class="card__button">Book Now</button>
+          </div>
+          <div class="card">
+            <img
+              src="img/activity-3.jpg"
+              alt="Activity: Tamarind falls hiking trip - full day"
+              class="card__image"
+            />
+            <h2 class="card__title">Tamarind falls hiking trip - full day</h2>
+            <button class="card__button">Book Now</button>
+          </div>
+          <div class="card">
+            <img
+              src="img/activity-4.jpg"
+              alt="Activity: The blue marine discovery quest"
+              class="card__image"
+            />
+            <h2 class="card__title">The blue marine discovery quest</h2>
+            <button class="card__button">Book Now</button>
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.activities-wrapper -->
+      </div>
+    </section>
     <!-- Развлечения -->
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <a
-            href="#"
-            class="logo footer__logo"
-            data-aos="zoom-in"
-            data-aos-anchor="#example-anchor"
-            data-aos-duration="500"
-            data-aos-delay="450"
-          >
+          <a href="#" class="logo footer__logo">
             <img src="img/vertical-logo.svg" alt="Best Tour Plan" />
           </a>
           <div class="footer__list footer__categories">
@@ -565,14 +529,16 @@
                     class="footer__icon"
                   />
                 </div>
-                Tel (business hours) :
-                <a class="footer__tel" href="tel:269 1500">269 1500</a><br />
-                Tel (hotline) Monday - Saturday:
-                <a class="footer__tel" href="tel:52-56-61-38">52-56-61-38</a>
-                (08:00 am – 20:00 pm)<br />
-                Tel (hotline) Sunday:
-                <a class="footer__tel" href="tel:52-56-61-38">52-56-61-38</a>
-                (08:00 am – 14:00 pm)<br />
+                <span
+                  >Tel (business hours) :
+                  <a class="footer__tel" href="tel:269 1500">269 1500</a><br />
+                  Tel (hotline) Monday - Saturday:
+                  <a class="footer__tel" href="tel:52-56-61-38">52-56-61-38</a>
+                  (08:00 am – 20:00 pm)<br />
+                  Tel (hotline) Sunday:
+                  <a class="footer__tel" href="tel:52-56-61-38">52-56-61-38</a>
+                  (08:00 am – 14:00 pm)</span
+                >
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
@@ -588,14 +554,7 @@
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
-            <h3
-              class="footer__title footer__title--mb-4"
-              data-aos="zoom-in"
-              data-aos-anchor="#example-anchor"
-              data-aos-offset="500"
-              data-aos-duration="500"
-              data-aos-delay="450"
-            >
+            <h3 class="footer__title footer__title--mb-4">
               Send us a message
             </h3>
             <form action="send.php" method="POST" class="form footer__form">
@@ -606,9 +565,6 @@
                   class="input footer__input footer__input--name"
                   placeholder="Your Full Name*"
                   required
-                  data-aos="fade-left"
-                  data-aos-duration="500"
-                  data-aos-delay="200"
                 />
               </div>
               <div class="footer__input-group">
@@ -618,18 +574,12 @@
                   class="input footer__input footer__input--phone"
                   placeholder="Phone Number*"
                   required
-                  data-aos="fade-left"
-                  data-aos-duration="500"
-                  data-aos-delay="300"
                 />
               </div>
               <textarea
                 class="message footer__message"
                 name="message"
                 placeholder="Message"
-                data-aos="fade-left"
-                data-aos-duration="800"
-                data-aos-delay="500"
               ></textarea>
               <button class="button footer__button" type="submit">
                 Send
@@ -708,7 +658,6 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
