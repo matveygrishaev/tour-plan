@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=	, initial-scale=1.0" />
     <title>Best Tour Plan - Hotel Booking</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&family=Nunito:wght@400;700;800&display=swap"
-      rel="stylesheet"
+      rel="preload"
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -15,7 +16,7 @@
     <header class="navbar navbar--mobile_fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="" class="logo">
+          <a href="https://matveygrishaev.ru/tour-plan" class="logo">
             <img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -24,7 +25,8 @@
           </a>
 
           <form
-            action="#"
+            action="send.php"
+            method="POST"
             class="search navbar__search navbar__search--mobile--hidden"
           >
             <input
@@ -73,7 +75,8 @@
             </li>
             <li class="navbar-menu__item navbar-menu__item--mobile--visible">
               <form
-                action="#"
+                action="send.php"
+                method="POST"
                 class="search navbar__search navbar__search--mobile--visible"
               >
                 <input
@@ -113,19 +116,3 @@
         <!-- /.container -->
       </div>
     </header>
-    <nav class="breadcrump">
-      <div class="container">
-        <ul class="breadcrump-list">
-          <li class="breadcrump-list__item">
-            <a href="#" class="breadcrump-list__link">Home</a>
-          </li>
-          <li class="breadcrump-list__item">
-            <a href="#" class="breadcrump-list__link">Flash Offers</a>
-          </li>
-          <li class="breadcrump-list__item">
-            Grand Hilton Hotel
-          </li>
-        </ul>
-      </div>
-      <!-- /.container -->
-    </nav>

@@ -1,13 +1,14 @@
 <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img
-            src="img/vertical-logo.svg"
-            alt="Best Tour Plan"
+          <a
+            href="https://matveygrishaev.ru/tour-plan/"
             class="logo footer__logo"
-          />
+          >
+            <img src="img/vertical-logo.svg" alt="Best Tour Plan" />
+          </a>
           <div class="footer__list footer__categories">
-            <h3 class="footer__title">ALL CATEGORIES</h3>
+            <h3 class="footer__title">ALL&nbsp;CATEGORIES</h3>
             <ul class="footer__ul">
               <li class="footer__item">
                 <a href="#" class="footer__link">All Deals</a>
@@ -36,7 +37,7 @@
             </ul>
           </div>
           <div class="footer__list footer__additional">
-            <h3 class="footer__title">ADDITIONAL INFORMATION</h3>
+            <h3 class="footer__title">ADDITIONAL&nbsp;INFORMATION</h3>
             <ul class="footer__ul">
               <li class="footer__item">
                 <a href="#" class="footer__link">About Uss</a>
@@ -78,7 +79,7 @@
           </div>
           <!-- /.footer__social-network -->
           <div class="footer__list footer__legal">
-            <h3 class="footer__title">LEGAL INFORMATION</h3>
+            <h3 class="footer__title">LEGAL&nbsp;INFORMATION</h3>
             <ul class="footer__ul">
               <li class="footer__item">
                 <a href="#" class="footer__link">Terms & Conditions</a>
@@ -96,7 +97,9 @@
           </div>
           <!-- /.footer__list -->
           <div class="footer__contact-details">
-            <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
+            <h3 class="footer__title footer__title--mb-3">
+              Contact&nbsp; Details
+            </h3>
             <p class="footer__text">
               Feel free to contact us by phone, email or by our contact form
             </p>
@@ -120,10 +123,16 @@
                     class="footer__icon"
                   />
                 </div>
-                Tel (business hours) : 269 1500<br />
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am –
-                20:00<br />
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)<br />
+                <span
+                  >Tel (business hours) :
+                  <a class="footer__tel" href="tel:269 1500">269 1500</a><br />
+                  Tel (hotline) Monday - Saturday:
+                  <a class="footer__tel" href="tel:52-56-61-38">52-56-61-38</a>
+                  (08:00 am – 20:00 pm)<br />
+                  Tel (hotline) Sunday:
+                  <a class="footer__tel" href="tel:52-56-61-38">52-56-61-38</a>
+                  (08:00 am – 14:00 pm)</span
+                >
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
@@ -139,24 +148,31 @@
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
-            <h3 class="footer__title footer__title--mb-3 footer__title--mb-4">
+            <h3 class="footer__title footer__title--mb-4">
               Send us a message
             </h3>
-            <form action="send.php" method="POST" class="footer__form">
-              <input
-                type="text"
-                name="name"
-                class="input footer__input footer__input--name"
-                placeholder="Your Full Name*"
-              />
-              <input
-                type="text"
-                name="phone"
-                class="input footer__input footer__input--phone"
-                placeholder="Phone Number*"
-              />
+            <form action="send.php" method="POST" class="form footer__form">
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  name="name"
+                  class="input footer__input footer__input--name"
+                  placeholder="Your Full Name*"
+                  required
+                />
+              </div>
+              <div class="footer__input-group">
+                <input
+                  type="tel"
+                  pattern="(\+?\d[- .]*){7,13}"
+                  name="phone"
+                  class="input footer__input footer__input--phone"
+                  placeholder="Phone Number*"
+                  required
+                />
+              </div>
               <textarea
-                class="footer__message"
+                class="message footer__message"
                 name="message"
                 placeholder="Message"
               ></textarea>
@@ -188,7 +204,5 @@
         </div>
       </div>
     </section>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
   </body>
 </html>

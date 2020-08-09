@@ -16,7 +16,7 @@
     <header class="navbar navbar--mobile_fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="https://matveygrishaev.ru/tour-plan/" class="logo">
+          <a href="https://matveygrishaev.ru/tour-plan" class="logo">
             <img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -578,8 +578,9 @@
               <div class="footer__input-group">
                 <input
                   type="tel"
-                  pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                  pattern="(\+?\d[- .]*){7,13}"
                   name="phone"
+                  id="tel"
                   class="input footer__input footer__input--phone"
                   placeholder="Phone Number*"
                   required
@@ -638,8 +639,9 @@
           />
           <input
             type="tel"
+            id="tel"
             name="phone"
-            pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+            pattern="(\+?\d[- .]*){7,13}"
             class="input modal__input modal__input--phone"
             placeholder="Phone Number*"
             required
